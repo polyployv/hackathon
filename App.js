@@ -1,12 +1,17 @@
 import React from 'react';
 import { Platform, StatusBar, StyleSheet, View } from 'react-native';
 import { AppLoading, Asset, Font, Icon } from 'expo';
-import AppNavigator from './navigation/AppNavigator';
+import AppNavigator from './navigation/MainTabNavigator';
 
 export default class App extends React.Component {
-  state = {
-    isLoadingComplete: false,
-  };
+   constructor(props) {
+     super(props);
+     this.state = {
+       isLoadingComplete: false,
+     };
+
+
+   }
 
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
@@ -39,6 +44,8 @@ export default class App extends React.Component {
         // We include SpaceMono because we use it in HomeScreen.js. Feel free
         // to remove this if you are not using it in your app
         'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+        Roboto: require('./assets/fonts/Roboto-Regular.ttf'),
+        Roboto_medium: require('./assets/fonts/Roboto-Medium.ttf')
       }),
     ]);
   };
