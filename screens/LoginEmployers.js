@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  
+  Image,
   View,
   StatusBar ,
   TouchableOpacity,
-  TextInput,
-  
+  TextInput
 } from 'react-native';
 
-import Logo from '../components/Logo';
-import Form from '../components/Form';
+
 import {Button,Text} from 'native-base';
 
 export default class LoginEmployers extends React.Component {
@@ -19,11 +17,13 @@ export default class LoginEmployers extends React.Component {
 	render() {
 		return(
 			<View style={styles.container}>
-				<Logo/>
+        <Image source={require('../assets/images/logo.png')}
+              style={styles.welcomeImage}
+            />     
 				<TextInput style={styles.inputBox} 
               underlineColorAndroid='rgba(0,0,0,0)' 
               placeholder="Email"
-              placeholderTextColor = "#ffffff"
+              placeholderTextColor = "#3945FF"
               selectionColor="#fff"
               keyboardType="email-address"
               onSubmitEditing={()=> this.password.focus()}
@@ -32,17 +32,28 @@ export default class LoginEmployers extends React.Component {
               underlineColorAndroid='rgba(0,0,0,0)' 
               placeholder="Password"
               secureTextEntry={true}
-              placeholderTextColor = "#ffffff"
+              placeholderTextColor = "#3945FF"
               ref={(input) => this.password = input}
-              />  
+              /> 
+           <Button
+            style={{
+              backgroundColor: "#444FAD",
+              alignSelf: "center",
+              borderRadius: 10,
+              marginTop: 15}} 
+            onPress={() => {this.props.navigation.navigate("IndexEmployers") }}>
+            <Text>เข้าสู่ระบบ</Text></Button>
            <Button 
+            style={{
+              backgroundColor: "#444FAD",
+              alignSelf: "center",
+              borderRadius: 10,
+              marginTop: 15}}
             onPress={() => {this.props.navigation.navigate("RegisterEmployers") }}>
-            <Text>employer sign up</Text>
-           </Button>   
-				<View style={styles.signupTextCont}>
-					<Text style={styles.signupText}>Already have an account?</Text>
-					<TouchableOpacity onPress={this.goBack}><Text style={styles.signupButton}> Sign in</Text></TouchableOpacity>
-				</View>
+            <Text>ลงทะเบียน</Text>
+           </Button>
+             
+		
 			</View>	
 			)
 	}
@@ -50,11 +61,12 @@ export default class LoginEmployers extends React.Component {
 
 const styles = StyleSheet.create({
   container : {
-    backgroundColor:'#455a64',
+    backgroundColor:'#E4F3F5',
     flex: 1,
     alignItems:'center',
     justifyContent :'center'
   },
+  
   signupTextCont : {
   	flexGrow: 1,
     alignItems:'flex-end',
@@ -63,12 +75,28 @@ const styles = StyleSheet.create({
     flexDirection:'row'
   },
   signupText: {
-  	color:'rgba(255,255,255,0.6)',
+  	color:'#444FAD',
   	fontSize:16
   },
   signupButton: {
-  	color:'#ffffff',
+  	color:'#444FAD',
   	fontSize:16,
   	fontWeight:'500'
-  }
+  },
+  welcomeImage: {
+    width: 250,
+    height: 200,
+    resizeMode: 'contain',
+    alignContent: 'center',
+  },
+  inputBox: {
+    width:300,
+    height: 30,
+    backgroundColor:'#ffffff',
+    borderRadius: 25,
+    paddingHorizontal:16,
+    fontSize:16,
+    color:'#444fad',
+    marginVertical: 10
+  },
 });

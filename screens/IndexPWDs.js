@@ -7,9 +7,10 @@ import {
 	ImageBackground,
 	Dimensions,
 	TouchableOpacity,
-	Button
 } from 'react-native';
-
+import{
+	Button
+} from 'native-base';
 
 
 
@@ -32,20 +33,41 @@ export default class IndexPWDs extends React.Component {
 		return (
 			
 				<ScrollView style={styles.container}>
-					<ImageBackground  source={require('../assets/images/profile.jpg')}style={styles.photo}>
+					<ImageBackground  source={{uri: 'https://scontent.fbkk11-1.fna.fbcdn.net/v/t1.0-9/49798865_2342060959416663_7679434222834024448_o.jpg?_nc_cat=111&_nc_ht=scontent.fbkk11-1.fna&oh=26236477a463b337936ae558751cea72&oe=5D4F4131'}} style={styles.photo}>
 					</ImageBackground>
-                    <View style={styles.containerItem}>
-                    <Text style={styles.name}>name</Text>
+                    
+                    <Text style={styles.name}>นางสาวศักดิ์ชัย กฐินเทศ</Text>
 
                     <Text style={styles.description}>
-                        age - location
+                        อายุ: 31 ปี
                     </Text>
 
                     <View style={styles.info}>
-     
-                    <Text style={styles.infoContent}>info</Text>
+                    <Text style={styles.infoContent}>
+										ที่อยู่: ตำบล บ่อโพง 
+												อำเภอ นครหลวง
+												จังหวัด พระนครศรีอยุธยา{"\n"}
+										เบอร์โทรศัพท์ 0718334923{"\n"}
+										ประเภทงาน: งานประจำ{"\n"}
+										ตำแหน่ง: ติดตามประเมินผลการทำงานคนพิการ{"\n"}
+										มาตรา: 35{"\n"}
+										หน่วยงานที่ดูแล: สมาคมรวมใจมุ่งพัฒนาอาชีพเพื่อคนตาบอดในประเทศไทย{"\n"}
+										บริษัท: KT จำกัด{"\n"}</Text>
                     </View>
-                    </View>
+										<Button
+										 style={{
+											backgroundColor: "#444FAD",
+											alignSelf: "center",
+											borderRadius: 10,
+											marginTop: 15}}><Text style={{ color: "white", fontSize: 18 }}>ส่งเอกสาร</Text></Button>
+                    
+										<Button
+										 style={{
+											backgroundColor: "#444FAD",
+											alignSelf: "center",
+											borderRadius: 10,
+											marginTop: 15}}><Text style={{ color: "white", fontSize: 18 }}>ออกจากระบบ</Text></Button>
+                    
 				</ScrollView>
 				
 		
@@ -68,7 +90,7 @@ const styles = StyleSheet.create({
 	},
 	photo: {
 		width: Dimensions.get('window').width,
-		height: 450
+		height: 300
 	},
 	top: {
 		paddingTop: 50,
@@ -132,28 +154,16 @@ const styles = StyleSheet.create({
 		shadowColor: '#000',
 		shadowOffset: { height: 0, width: 0 }
 	},
-	matches: {
-		width: 131,
-		marginTop: -15,
-		backgroundColor: '#7444C0',
-		paddingVertical: 7,
-		paddingHorizontal: 20,
-		borderRadius: 20,
-		textAlign: 'center',
-		alignSelf: 'center'
-	},
-	matchesText: {
-		color: '#FFF'
-	},
+	
 	name: {
 		paddingTop: 25,
 		paddingBottom: 5,
-		color: '#363636',
+		color: '#000000',
 		fontSize: 15,
 		textAlign: 'center'
 	},
 	description: {
-		color: '#757E90',
+		color: '#000000',
 		textAlign: 'center',
 		paddingBottom: 20,
 		fontSize: 13
@@ -169,7 +179,7 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 10
 	},
 	infoContent: {
-		color: '#757E90',
+		color: '#000000',
 		fontSize: 13
 	},
 });
