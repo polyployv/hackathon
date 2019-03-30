@@ -8,7 +8,7 @@ import LoginEmployers from "../screens/LoginEmployers";
 import LoginPWDs from "../screens/LoginPWDs";
 import IndexPWDs from "../screens/IndexPWDs";
 import IndexEmployers from "../screens/IndexEmployers";
-
+import FilterEmployers from "../screens/FilterEmployers";
 export const Navigator = new createStackNavigator(
   {
     HomeScreen: {screen: HomeScreen},
@@ -17,7 +17,8 @@ export const Navigator = new createStackNavigator(
     LoginEmployers: {screen: LoginEmployers},
     LoginPWDs: {screen: LoginPWDs},
     IndexPWDs: {screen: IndexPWDs},
-    IndexEmployers: {screen: IndexEmployers}
+    IndexEmployers: {screen: IndexEmployers},
+    FilterEmployers: {screen: FilterEmployers}
   },
   {
     initialRouteName: "HomeScreen"

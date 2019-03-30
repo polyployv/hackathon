@@ -8,6 +8,15 @@ import {
 } from 'react-native'
 
 export default class RegisterPWDs extends React.Component {
+  static navigationOptions = {
+    title: 'ลงทะเบียนบริษัท',
+    headerStyle: {
+      backgroundColor: "#444FAD"
+    },
+    headerTitleStyle: {
+			color: '#FFFFFF',
+		},
+	  };
   state = {
     username: '', password: '', email: '', phone_number: '',re_password: '', company_name: '', location: '', province: '', skype: '', fb: ''
   }
@@ -94,7 +103,7 @@ export default class RegisterPWDs extends React.Component {
         />
         <Button
           title='ยืนยันการลงทะเบียน'
-          onPress={() => {this.props.navigation.navigate("IndexEmployers") }}
+          onPress={() => {this.props.navigation.navigate("FilterEmployers") }}
         />
       </View>
     )

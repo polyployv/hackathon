@@ -3,13 +3,15 @@ import {
 	StyleSheet,
 	ScrollView,
 	View,
-	Text,
+	
 	ImageBackground,
 	Dimensions,
-	TouchableOpacity,
+	
 } from 'react-native';
 import{
-	Button
+	Button,
+	TouchableOpacity,
+	Text,
 } from 'native-base';
 
 
@@ -17,11 +19,12 @@ import{
 export default class IndexPWDs extends React.Component {
 	static navigationOptions = {
 		title:  'Profile',
+		
 		headerStyle: {
-			backgroundColor: '#ffe3e3',
+      backgroundColor: "#444FAD"
 		},
 		headerTitleStyle: {
-			color: '#444FAD',
+			color: '#FFFFFF',
 		},
 	  
 	};
@@ -35,11 +38,11 @@ export default class IndexPWDs extends React.Component {
 				<ScrollView style={styles.container}>
 					<ImageBackground  source={{uri: 'https://scontent.fbkk11-1.fna.fbcdn.net/v/t1.0-9/49798865_2342060959416663_7679434222834024448_o.jpg?_nc_cat=111&_nc_ht=scontent.fbkk11-1.fna&oh=26236477a463b337936ae558751cea72&oe=5D4F4131'}} style={styles.photo}>
 					</ImageBackground>
-                    
+					<View style={styles.containerProfile}>
                     <Text style={styles.name}>นางสาวศักดิ์ชัย กฐินเทศ</Text>
 
                     <Text style={styles.description}>
-                        อายุ: 31 ปี
+                        อายุ: 31 ปีg
                     </Text>
 
                     <View style={styles.info}>
@@ -53,6 +56,7 @@ export default class IndexPWDs extends React.Component {
 										มาตรา: 35{"\n"}
 										หน่วยงานที่ดูแล: สมาคมรวมใจมุ่งพัฒนาอาชีพเพื่อคนตาบอดในประเทศไทย{"\n"}
 										บริษัท: KT จำกัด{"\n"}</Text>
+							</View>		
                     </View>
 										<Button
 										 style={{
@@ -81,6 +85,19 @@ export default class IndexPWDs extends React.Component {
 const styles = StyleSheet.create({
 	container: 
 	{ marginHorizontal: 0 },
+	containerProfile:
+	{
+		backgroundColor: '#FFF',
+		paddingHorizontal: 10,
+		paddingBottom: 25,
+		margin: 20,
+		borderRadius: 8,
+		marginTop: -65,
+		shadowOpacity: 0.05,
+		shadowRadius: 10,
+		shadowColor: '#000',
+		shadowOffset: { height: 0, width: 0 }
+	},
 	
 	bg: {
 		flex: 1,
@@ -90,7 +107,7 @@ const styles = StyleSheet.create({
 	},
 	photo: {
 		width: Dimensions.get('window').width,
-		height: 300
+		height: 400
 	},
 	top: {
 		paddingTop: 50,

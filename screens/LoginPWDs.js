@@ -11,7 +11,9 @@ import {
 import {Button,Text} from 'native-base';
 
 export default class LoginPWDs extends React.Component {
-
+  static navigationOptions = {
+		header: null
+	  };
 
 	render() {
 		return(
