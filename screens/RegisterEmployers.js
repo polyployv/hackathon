@@ -94,7 +94,7 @@ export default class RegisterPWDs extends React.Component {
         />
         <Button
           title='ยืนยันการลงทะเบียน'
-          onPress={this.signUp}
+          onPress={() => {this.props.navigation.navigate("IndexEmployers") }}
         />
       </View>
     )

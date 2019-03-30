@@ -13,7 +13,7 @@ export const Navigator = new createStackNavigator(
   {
     HomeScreen: {screen: HomeScreen},
     RegisterEmployers: {screen: RegisterEmployers},
-    RegitsterPWDs: {screen: RegisterPWDs},
+    RegisterPWDs: {screen: RegisterPWDs},
     LoginEmployers: {screen: LoginEmployers},
     LoginPWDs: {screen: LoginPWDs},
     IndexPWDs: {screen: IndexPWDs},
