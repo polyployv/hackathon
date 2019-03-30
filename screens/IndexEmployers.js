@@ -3,7 +3,7 @@ import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
 export default class IndexEmployers extends Component {
   static navigationOptions = {
-    title: 'จ้างงาน',
+    title: 'none',
     headerStyle: {
       backgroundColor: "#444FAD"
     },
@@ -37,11 +37,11 @@ export default class IndexEmployers extends Component {
               </Left>
             </CardItem>
           </Card>
-          <Card>
-          <CardItem onPress={() => {this.props.navigation.navigate("IndexPWDs") }}>
+          <Card onPress={() => {this.props.navigation.navigate("IndexPWDs") }}>
+          <CardItem >
               <Left>
                 <Body>
-                  <Text>นางสาวศักดิ์ชัย กฐินเทศ</Text>
+                  <Text onPress={() => {this.props.navigation.navigate("IndexPWDs") }}>นางสาวศักดิ์ชัย กฐินเทศ</Text>
                 </Body>
               </Left>
             </CardItem>
