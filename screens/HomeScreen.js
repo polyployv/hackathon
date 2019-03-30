@@ -31,15 +31,17 @@ export default class HomeScreen extends React.Component {
               alignSelf: "flex-end",
               borderRadius: 10,
               marginTop: 15}}
-             onPress={() => {this.props.navigation.navigate("RegisterEmployers") }}
+             onPress={() => {this.props.navigation.navigate("IndexPWDs") }}
               ><Text style={{ color: "white", fontSize: 18 }}> ผู้พิการ </Text></Button>
-               <Button
+              <Button
              style={{
               backgroundColor: "#FF3879",
               alignSelf: "flex-end",
               borderRadius: 10,
-              marginTop: 15}} 
+              marginTop: 15}}
+              onPress={() => {this.props.navigation.navigate("LoginEmployers") }} 
               ><Text style={{ color: "white", fontSize: 18 }}> บริษัท </Text></Button>
+             
 
             </View>      
       </View>    

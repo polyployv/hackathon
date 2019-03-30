@@ -6,6 +6,8 @@ import RegisterEmployers from "../screens/RegisterEmployers.js";
 import RegisterPWDs from "../screens/RegisterPWDs";
 import LoginEmployers from "../screens/LoginEmployers";
 import LoginPWDs from "../screens/LoginPWDs";
+import IndexPWDs from "../screens/IndexPWDs";
+import IndexEmployers from "../screens/IndexEmployers";
 
 export const Navigator = new createStackNavigator(
   {
@@ -13,7 +15,9 @@ export const Navigator = new createStackNavigator(
     RegisterEmployers: {screen: RegisterEmployers},
     RegitsterPWDs: {screen: RegisterPWDs},
     LoginEmployers: {screen: LoginEmployers},
-    LoginPWDs: {screen: LoginPWDs}
+    LoginPWDs: {screen: LoginPWDs},
+    IndexPWDs: {screen: IndexPWDs},
+    IndexEmployers: {screen: IndexEmployers}
   },
   {
     initialRouteName: "HomeScreen"
