@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, Form, Item, Picker, Icon, Button,Text } from 'native-base';
+
+
+
 export default class FilterEmployers extends Component {
   static navigationOptions = {
     title: 'จ้างงาน',
     headerStyle: {
       backgroundColor: "#444FAD"
     },
+    headerTitleStyle: {
+			color: '#FFFFFF',
+		},
     
   };
+  
     constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +29,7 @@ export default class FilterEmployers extends Component {
   render() {
     return (
       <Container>
-        <Header />
+         <Header />
         <Content>
           <Form>
             <Item picker>
@@ -36,49 +43,19 @@ export default class FilterEmployers extends Component {
                 selectedValue={this.state.selected2}
                 onValueChange={this.onValueChange2.bind(this)}
               >
-                <Picker.Item label="18" value="key0" />
-                <Picker.Item label="19" value="key1" />
-                <Picker.Item label="20" value="key2" />
-                <Picker.Item label="21" value="key3" />
-                <Picker.Item label="22" value="key4" />
-                <Picker.Item label="23" value="key0" />
-                <Picker.Item label="24" value="key1" />
-                <Picker.Item label="25" value="key2" />
-                <Picker.Item label="26" value="key3" />
-                <Picker.Item label="27" value="key4" />
-                <Picker.Item label="28" value="key0" />
-                <Picker.Item label="29" value="key1" />
-                <Picker.Item label="30" value="key2" />
-                <Picker.Item label="31" value="key3" />
-                <Picker.Item label="32" value="key4" />
-                <Picker.Item label="33" value="key0" />
-                <Picker.Item label="34" value="key1" />
-                <Picker.Item label="35" value="key2" />
-                <Picker.Item label="36" value="key3" />
-                <Picker.Item label="37" value="key4" />
-                <Picker.Item label="38" value="key0" />
-                <Picker.Item label="39" value="key1" />
-                <Picker.Item label="40" value="key2" />
-                <Picker.Item label="41" value="key3" />
-                <Picker.Item label="42" value="key4" />
-              </Picker>
-              </Item>
-              <Item picker>
-              <Picker
-                mode="dropdown"
-                iosIcon={<Icon name="arrow-down" />}
-                style={{ width: undefined }}
-                placeholder="ประเภทงาน"
-                placeholderStyle={{ color: "#bfc6ea" }}
-                placeholderIconColor="#007aff"
-                selectedValue={this.state.selected2}
-                onValueChange={this.onValueChange2.bind(this)}
-              >
-                <Picker.Item label="งานประจำ" value="key0" />
-                <Picker.Item label="งานกำกับตนเอง" value="key1" />
+                <Picker.Item label="18-25" value="key0" />
+                <Picker.Item label="26-30" value="key1" />
+                <Picker.Item label="31-35" value="key2" />
+                <Picker.Item label="36-40" value="key3" />
+                <Picker.Item label="41-45" value="key4" />
+                <Picker.Item label="46-50" value="key0" />
+                <Picker.Item label="51-55" value="key1" />
+                <Picker.Item label="56-60" value="key2" />
+                
                 
               </Picker>
               </Item>
+              
               <Item picker>
               <Picker
                 mode="dropdown"

@@ -14,23 +14,40 @@ export default class IndexEmployers extends Component {
   render() {
     return (
       <Container>
-        <Header>
-
-                  <Text>คัดกรอง</Text>
-
-        </Header>
         <Content>
           <Card style={{flex: 0}}>
             <CardItem>
               <Left>
                 <Body>
-                  <Text>แฮกกาตอน แอคเซนเจอร์</Text>
+                  <Text>ลูกหมู อู๊ดอู๊ด</Text>
                 </Body>
               </Left>
             </CardItem>
             <CardItem style={{justifyContent: "center"}}>
               <Body>
                 <Image source={{uri: 'https://scontent.fbkk11-1.fna.fbcdn.net/v/t1.0-9/49798865_2342060959416663_7679434222834024448_o.jpg?_nc_cat=111&_nc_ht=scontent.fbkk11-1.fna&oh=26236477a463b337936ae558751cea72&oe=5D4F4131'}} style={{height: 100, width: 100, flex: 1}}/>
+              </Body>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Button transparent textStyle={{color: '#87838B'}}>
+                  <Icon name="person" />
+                  <Text>สถานะ: รับรอง</Text>
+                </Button>
+              </Left>
+            </CardItem>
+          </Card>
+          <Card>
+          <CardItem onPress={() => {this.props.navigation.navigate("IndexPWDs") }}>
+              <Left>
+                <Body>
+                  <Text>นางสาวศักดิ์ชัย กฐินเทศ</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem style={{justifyContent: "center"}}>
+              <Body>
+                <Image source={{uri: 'https://scontent.fbkk11-1.fna.fbcdn.net/v/t1.0-9/45830647_2609704552380718_72265972966227968_n.jpg?_nc_cat=109&_nc_ht=scontent.fbkk11-1.fna&oh=0e2315132d608f4532d5d22799380819&oe=5D0F240A'}} style={{height: 100, width: 100, flex: 1}}/>
               </Body>
             </CardItem>
             <CardItem>
