@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { createAppContainer, createStackNavigator } from "react-navigation";
 
 import HomeScreen from "../screens/HomeScreen";
-import RegisterEmployers from "../screens/RegisterEmployers";
+import RegisterEmployers from "../screens/RegisterEmployers.js";
 import RegisterPWDs from "../screens/RegisterPWDs";
 import LoginEmployers from "../screens/LoginEmployers";
 import LoginPWDs from "../screens/LoginPWDs";

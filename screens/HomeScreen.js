@@ -4,9 +4,9 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
-  TouchableOpacity,
   View,
   AsyncStorage,
+  TouchableOpacity,
 
 } from 'react-native';
 // import { Icon } from 'react-native-elements'
@@ -14,7 +14,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import { geocodeAsync } from 'expo-location';
 import {Button,Text} from 'native-base';
 
-export default class Home extends React.Component {
+export default class HomeScreen extends React.Component {
   static navigationOptions = {
 		header: null
 	  };
@@ -31,6 +31,7 @@ export default class Home extends React.Component {
               alignSelf: "flex-end",
               borderRadius: 10,
               marginTop: 15}}
+             onPress={() => {this.props.navigation.navigate("RegisterEmployers") }}
               ><Text style={{ color: "white", fontSize: 18 }}> ผู้พิการ </Text></Button>
                <Button
              style={{
