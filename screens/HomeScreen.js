@@ -29,7 +29,7 @@ export default class HomeScreen extends React.Component {
             <View style={styles.button}>
              <Button
              style={{
-              backgroundColor: "#FF3879",
+              backgroundColor: "#444FAD",
               alignSelf: "center",
               borderRadius: 10,
               marginTop: 10}}
@@ -37,7 +37,7 @@ export default class HomeScreen extends React.Component {
               ><Text style={{ color: "white", fontSize: 18 }}> ผู้พิการ </Text></Button>
               <Button 
              style={{
-              backgroundColor: "#FF3879",
+              backgroundColor: "#444FAD",
               alignSelf: "center",
               borderRadius: 10,
               marginTop: 10}}

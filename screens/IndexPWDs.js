@@ -3,15 +3,16 @@ import {
 	StyleSheet,
 	ScrollView,
 	View,
-	
+
 	ImageBackground,
 	Dimensions,
-	
+	Icon
 } from 'react-native';
 import{
 	Button,
 	TouchableOpacity,
 	Text,
+	
 } from 'native-base';
 
 
@@ -36,7 +37,7 @@ export default class IndexPWDs extends React.Component {
 		return (
 			
 				<ScrollView style={styles.container}>
-					<ImageBackground  source={{uri: 'https://scontent.fbkk11-1.fna.fbcdn.net/v/t1.0-9/49798865_2342060959416663_7679434222834024448_o.jpg?_nc_cat=111&_nc_ht=scontent.fbkk11-1.fna&oh=26236477a463b337936ae558751cea72&oe=5D4F4131'}} style={styles.photo}>
+					<ImageBackground  source={{uri: 'https://scontent.fbkk11-1.fna.fbcdn.net/v/t1.0-9/45830647_2609704552380718_72265972966227968_n.jpg?_nc_cat=109&_nc_ht=scontent.fbkk11-1.fna&oh=0e2315132d608f4532d5d22799380819&oe=5D0F240A'}} style={styles.photo}>
 					</ImageBackground>
 					<View style={styles.containerProfile}>
                     <Text style={styles.name}>นางสาวศักดิ์ชัย กฐินเทศ</Text>
@@ -44,6 +45,7 @@ export default class IndexPWDs extends React.Component {
                     <Text style={styles.description}>
                         อายุ: 31 ปีg
                     </Text>
+										
 
                     <View style={styles.info}>
                     <Text style={styles.infoContent}>
@@ -55,22 +57,33 @@ export default class IndexPWDs extends React.Component {
 										ตำแหน่ง: ติดตามประเมินผลการทำงานคนพิการ{"\n"}
 										มาตรา: 35{"\n"}
 										หน่วยงานที่ดูแล: สมาคมรวมใจมุ่งพัฒนาอาชีพเพื่อคนตาบอดในประเทศไทย{"\n"}
-										บริษัท: KT จำกัด{"\n"}</Text>
+										บริษัท: KT จำกัด{"\n"}
+										</Text>
+										
 							</View>		
                     </View>
 										<Button
+										
 										 style={{
 											backgroundColor: "#444FAD",
 											alignSelf: "center",
 											borderRadius: 10,
-											marginTop: 15}}><Text style={{ color: "white", fontSize: 18 }}>ส่งเอกสาร</Text></Button>
+											marginTop: 2}}><Text style={{ color: "white", fontSize: 18 }}>แก้ไขข้อมูล</Text></Button>
+										<Button
+										onPress={() => {this.props.navigation.navigate("SubmitToReview") }}
+										 style={{
+											backgroundColor: "#444FAD",
+											alignSelf: "center",
+											borderRadius: 10,
+											marginTop: 2}}><Text style={{ color: "white", fontSize: 18 }}>ส่งเอกสาร</Text></Button>
                     
 										<Button
+										
 										 style={{
 											backgroundColor: "#444FAD",
 											alignSelf: "center",
 											borderRadius: 10,
-											marginTop: 15}}><Text style={{ color: "white", fontSize: 18 }}>ออกจากระบบ</Text></Button>
+											marginTop: 2}}><Text style={{ color: "white", fontSize: 18 }}>ออกจากระบบ</Text></Button>
                     
 				</ScrollView>
 				
@@ -107,7 +120,7 @@ const styles = StyleSheet.create({
 	},
 	photo: {
 		width: Dimensions.get('window').width,
-		height: 400
+		height: 300
 	},
 	top: {
 		paddingTop: 50,
@@ -197,7 +210,7 @@ const styles = StyleSheet.create({
 	},
 	infoContent: {
 		color: '#000000',
-		fontSize: 13
+		fontSize: 14
 	},
 });
 

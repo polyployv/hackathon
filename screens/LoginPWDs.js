@@ -18,9 +18,7 @@ export default class LoginPWDs extends React.Component {
 	render() {
 		return(
 			<View style={styles.container}>
-				<Image source={require('../assets/images/logo.png')}
-              style={styles.welcomeImage}
-            />   
+				
 				<TextInput style={styles.inputBox} 
               
               placeholder="Email"
@@ -60,7 +58,7 @@ export default class LoginPWDs extends React.Component {
 
 const styles = StyleSheet.create({
   container : {
-    backgroundColor:'#E4F3F5',
+    backgroundColor:'#E0E2DB',
     flex: 1,
     alignItems:'center',
     justifyContent :'center'
