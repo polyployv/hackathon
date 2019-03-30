@@ -8,6 +8,15 @@ import {
 } from 'react-native'
 
 export default class RegisterPWDs extends React.Component {
+  static navigationOptions = {
+    title: 'ลงทะเบียนผู้พิการ',
+    headerStyle: {
+      backgroundColor: "#444FAD"
+    },
+    headerTitleStyle: {
+			color: '#FFFFFF',
+		},
+	  };
   state = {
     username: '', password: '',re_password:'', email: '', phone_number: ''
   }

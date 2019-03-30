@@ -21,24 +21,26 @@ export default class HomeScreen extends React.Component {
     render() {
     return(  
       <View style={styles.container}>
-            <Image source={require('../assets/images/logo.png')}
+            <Image 
+            style={{alignSelf: "center",}}
+            source={require('../assets/images/logo.png')}
               style={styles.welcomeImage}
             />     
             <View style={styles.button}>
              <Button
              style={{
               backgroundColor: "#FF3879",
-              alignSelf: "flex-end",
+              alignSelf: "center",
               borderRadius: 10,
-              marginTop: 15}}
+              marginTop: 10}}
              onPress={() => {this.props.navigation.navigate("LoginPWDs") }}
               ><Text style={{ color: "white", fontSize: 18 }}> ผู้พิการ </Text></Button>
-              <Button
+              <Button 
              style={{
               backgroundColor: "#FF3879",
-              alignSelf: "flex-end",
+              alignSelf: "center",
               borderRadius: 10,
-              marginTop: 15}}
+              marginTop: 10}}
               onPress={() => {this.props.navigation.navigate("LoginEmployers") }} 
               ><Text style={{ color: "white", fontSize: 18 }}> บริษัท </Text></Button>
              
@@ -59,7 +61,7 @@ const styles = StyleSheet.create({
   }, 
   welcomeImage: {
     width: 250,
-    height: 200,
+    height: 250,
     resizeMode: 'contain',
     alignContent: 'center',
   },

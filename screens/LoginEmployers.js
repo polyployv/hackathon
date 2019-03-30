@@ -12,7 +12,9 @@ import {
 import {Button,Text} from 'native-base';
 
 export default class LoginEmployers extends React.Component {
-
+  static navigationOptions = {
+		header: null
+	  };
 
 	render() {
 		return(
@@ -41,7 +43,7 @@ export default class LoginEmployers extends React.Component {
               alignSelf: "center",
               borderRadius: 10,
               marginTop: 15}} 
-            onPress={() => {this.props.navigation.navigate("IndexEmployers") }}>
+            onPress={() => {this.props.navigation.navigate("FilterEmployers") }}>
             <Text>เข้าสู่ระบบ</Text></Button>
            <Button 
             style={{

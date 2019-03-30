@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
 export default class IndexEmployers extends Component {
+  static navigationOptions = {
+    title: 'จ้างงาน',
+    headerStyle: {
+      backgroundColor: "#444FAD"
+    },
+    headerTitleStyle: {
+			color: '#FFFFFF',
+		},
+  }
   render() {
     return (
       <Container>
